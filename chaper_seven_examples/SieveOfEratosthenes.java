@@ -18,7 +18,9 @@ public class SieveOfEratosthenes {
         list[0] = false;
         list[1] = false;
 
-        int upperBound = (int) (Math.sqrt(n) + 1);
+        int upperBound = (int) (Math.sqrt(n) + 1); // n sayısının karekökünü almamızın sebebi, n’e kadar gitmek yerine yalnızca
+        // kareköküne kadar olan sayılara gitmektir;// çünkü daha büyük çarpanlar zaten işaretlendiği için gereksiz tekrar yapılmaz.
+        // +1 kısmı ise, double’dan int’e dönüşüm sırasında sayı kaybı yaşanması ihtimaline karşı tedbir olarak eklenir.
 
         for (int i = 2; i <= upperBound; i++) {
             if (list[i] == true)
