@@ -18,6 +18,7 @@ public class PrimeDivisorFinder {
 
     public static void main(String[] args) {
 
+        long start = System.currentTimeMillis();
         Scanner input = new Scanner(System.in);
         System.out.println("enter a number sir:]");
         int a = input.nextInt();
@@ -31,5 +32,8 @@ public class PrimeDivisorFinder {
             }
             i++;
         }
+        long end = System.currentTimeMillis();
+        long time = end - start;
+        System.out.println(time);
     }
 }
