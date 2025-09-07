@@ -1,6 +1,6 @@
 public class Queue {
     //Default maximum queue size
-    public static final int MAX_QUEUE_SIZE = 0;
+    public static final int MAX_QUEUE_SIZE = 4;
 
     //Insert element at the bottom
     public void queue(String newElement)
