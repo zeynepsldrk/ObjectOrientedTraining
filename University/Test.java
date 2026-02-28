@@ -1,3 +1,4 @@
+
 public class Test {
     public static void main(String[] args) {
         Department department1 = new Department();
@@ -36,9 +37,9 @@ public class Test {
         course1.students = new Student[100];
         course1.students[0] = student1;
 
-        System.out.println("Name of student student1's first course is " + student1.coursesTaken[0].name);
-        System.out.println("Name of student student1's first course's professor is " + student1.coursesTaken[0].teacher.name);
-        System.out.println("Name of student student1's first course's professor's department is " + student1.coursesTaken[0].teacher.department.name);
+        System.out.println(student1.getName() + "' s first course is " + student1.coursesTaken[0].name);
+        System.out.println(student1.getName() + "'s first course's professor is " + student1.coursesTaken[0].teacher.name);
+        System.out.println(student1.getName() + "'s first course's professor's department is " + student1.coursesTaken[0].teacher.department.name);
 
         System.out.println("**********************************************************");
 
@@ -143,10 +144,48 @@ public class Test {
         course3.students[1] = student3;
         course3.students[2] = student4;
 
-        System.out.println("Name of student student2's all courses is " + student2.coursesTaken[0].name + ", " + student2.coursesTaken[1].name + ", " + student2.coursesTaken[2].name);
-        System.out.println("Name of student student2's all courses's professor is " + student2.coursesTaken[0].teacher.name + ", " + student2.coursesTaken[1].teacher.name + ", " + student2.coursesTaken[2].teacher.name);
-        System.out.println("Name of student student2's all courses's professor's department is " + student2.coursesTaken[0].teacher.department.name + ", " + student2.coursesTaken[1].teacher.department.name + ", " + student2.coursesTaken[2].teacher.department.name);
+        System.out.println(student2.getName() + "'s all courses is " + student2.coursesTaken[0].name + ", " + student2.coursesTaken[1].name + ", " + student2.coursesTaken[2].name);
+        System.out.println(student2.getName() + "'s all courses's professor is " + student2.coursesTaken[0].teacher.name + ", " + student2.coursesTaken[1].teacher.name + ", " + student2.coursesTaken[2].teacher.name);
+        System.out.println(student2.getName() + "'s all courses's professor's department is " + student2.coursesTaken[0].teacher.department.name + ", " + student2.coursesTaken[1].teacher.department.name + ", " + student2.coursesTaken[2].teacher.department.name);
 
+        System.out.println("*************************************************");
+
+        /*Create a new student, student takes four courses and any coures has a own classroom
+        * print new student's informations
+        * make relation between courses and classrooms */
+
+        Student student5 = new Student();
+        student5.name = "Sarah";
+
+        Classroom classr1 = new Classroom();
+        classr1.name = "a_301";
+        Classroom classr2 = new Classroom();
+        classr2.name = "a_302";
+        Classroom classr3 = new Classroom();
+        classr3.name = "a_303";
+        Classroom classr4 = new Classroom();
+        classr4.name = "a_304";
+
+
+        Course course4 = new Course();
+        course4.name = "Art";
+        course4.classroom = classr1;
+        course1.classroom = classr2;
+        course2.classroom = classr3;
+        course3.classroom = classr4;
+
+        course4.students = new Student[5];
+        course4.students[0] = student4;
+        course4.students[1] = student1;
+        course4.students[2] = student2;
+
+        student5.coursesTaken = new Course[3];
+        student5.coursesTaken[0] = course4;
+        student5.coursesTaken[1] = course2;
+
+
+        System.out.println("New student " + student5.getName() + " has some lectures: " + student5.coursesTaken[0].name + ", " + student5.coursesTaken[1].name);
+        System.out.println(student5.coursesTaken[0].name + " in " + student5.coursesTaken[0].classroom.name + " and " + student5.coursesTaken[1].name + " in " + student5.coursesTaken[1].classroom.getName());
 
     }
 }
