@@ -6,8 +6,9 @@
       <sourceFolder url="file://$MODULE_DIR$/car" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/footballplayer" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/chapter_six_examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/chaper_seven_examples" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/University" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_nine_homeworks" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/chapter_seven_examples" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/university" isTestSource="false" />
       <excludePattern pattern="git" />
     </content>
     <orderEntry type="inheritedJdk" />
