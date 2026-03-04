@@ -36,8 +36,17 @@ public class Point {
         return (Math.sqrt(Math.pow((point.getX() - x), 2) + Math.pow((point.getY() - y), 2)));
     }
 
-    public Point movePoint(int x, int y)
+    public void movePoint(int x, int y)
     {
-        
+        this.x = this.x + x;
+        this.y = this.y + y;
+    }
+
+    public Point clonePoint()
+    {
+        Point newPoint = new Point();
+        newPoint.x = this.x;
+        newPoint.y = this.y;
+        return (newPoint);
     }
 }
