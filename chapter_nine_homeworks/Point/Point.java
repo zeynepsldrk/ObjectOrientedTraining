@@ -26,18 +26,18 @@ public class Point {
     * move metodunda x veya y yönünde hareket edecek
     * iki tane point nesnesi ile denemeler yap*/
 
-    public int calculateDistanceOfOrigin()
+    public double calculateDistanceOfOrigin()
     {
-        return ();
+        return (Math.sqrt((x * x) + (y * y)));
     }
 
-    public int calculateDistanceOfAnotherPoint(Point point)
+    public double calculateDistanceOfAnotherPoint(Point point)
     {
-
+        return (Math.sqrt(Math.pow((point.getX() - x), 2) + Math.pow((point.getY() - y), 2)));
     }
 
     public Point movePoint(int x, int y)
     {
-
+        
     }
 }
